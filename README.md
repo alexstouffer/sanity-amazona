@@ -1,4 +1,12 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Amazona Readme Log
+
+4. Publish to github
+   1. create githb account
+   2. push to github from vs code
+5. Create Website Layout
+   1. Add header
+   2. Add main
+   3. Add footer
 
 ## Getting Started
 
