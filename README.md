@@ -8,6 +8,10 @@
    2. Add main
    3. Add footer
 
+## NPM Error
+
+Sanity command wasn't being found. Use npx prefix instead when running sanity commands.
+
 ## Getting Started
 
 First, run the development server:
