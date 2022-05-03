@@ -5,6 +5,7 @@ import {
   CardActions,
   CardContent,
   CardMedia,
+  Rating,
   Typography,
 } from '@mui/material';
 import NextLink from 'next/link';
@@ -14,7 +15,7 @@ import { urlForThumbnail } from '../utils/image';
 export default function ProductItem({ product }) {
   return (
     <Card>
-      <NextLink href={`/prodcuct/${product.slug.current}`} passHref>
+      <NextLink href={`/product/${product.slug.current}`} passHref>
         <CardActionArea>
           <CardMedia
             component="img"
@@ -23,16 +24,14 @@ export default function ProductItem({ product }) {
           ></CardMedia>
           <CardContent>
             <Typography>{product.name}</Typography>
-            <Typography>
-              {product.rating} ({product.numReviews} reviews)
-            </Typography>
+            <Rating value={product.rating} readOnly></Rating>
           </CardContent>
         </CardActionArea>
       </NextLink>
       <CardActions>
         <Typography>${product.price}</Typography>
         <Button size="small" color="primary">
-          Add to Cart
+          Add to cart
         </Button>
       </CardActions>
     </Card>

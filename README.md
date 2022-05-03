@@ -7,10 +7,30 @@
    1. Add header
    2. Add main
    3. Add footer
+6. Connect to Sanity.io
+   1. install sanity
+   2. init sanity
+   3. create product model
+   4. insert sample data
+7. List Products
+   1. add localhost:3000 to the CORS origins in sanity
+   2. fetch products from sanity
+   3. render products on screen
+8. Create Product Details Screen
+   1. add `[slug].js` to product folder
+   2. create component
+   3. get slug from the URL
+   4. fetch product from sanity client
+   5. render product image, info
+   6. show add to cart button
+
+Current Lesson: 9
 
 ## NPM Error
 
 Sanity command wasn't being found. Use npx prefix instead when running sanity commands.
+
+To start sanity server, `cd` into directory and start the content server with command: `npx sanity start`
 
 ## Getting Started
 
