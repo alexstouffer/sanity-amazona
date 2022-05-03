@@ -1,7 +1,7 @@
 import '../styles/globals.css';
 import createCache from '@emotion/cache';
 import { CacheProvider } from '@emotion/react';
-import { StoreProvider } from '../utils/store';
+import { StoreProvider } from '../utils/Store';
 
 const clientSideEmotionCache = createCache({ key: 'css' });
 
