@@ -22,6 +22,8 @@ import NextLink from 'next/link';
 import Layout from '../components/Layout';
 import { useContext } from 'react';
 import { Store } from '../utils/Store';
+import axios from 'axios';
+import { useSnackbar } from 'notistack';
 
 function CartScreen() {
   const {
@@ -31,7 +33,30 @@ function CartScreen() {
     dispatch,
   } = useContext(Store);
 
-  const updateCartHandler = async (item, quantity) => {};
+  const { enqueueSnackbar } = useSnackbar();
+
+  const updateCartHandler = async (item, quantity) => {
+    const { data } = await axios.get(`/api/products/${item._id}`);
+    if (data.countInStock < quantity) {
+      enqueueSnackbar('Sorry. Product is out of stock', { variant: 'error' });
+      return;
+    }
+    dispatch({
+      type: 'CART_ADD_ITEM',
+      payload: {
+        _key: item._key,
+        name: item.name,
+        countInStock: item.countInStock,
+        slug: item.slug,
+        price: item.price,
+        image: item.image,
+        quantity,
+      },
+    });
+    enqueueSnackbar(`${item.name} updated in the cart`, {
+      variant: 'success',
+    });
+  };
   const removeItemHandler = (item) => {
     dispatch({ type: 'CART_REMOVE_ITEM', payload: item });
   };
