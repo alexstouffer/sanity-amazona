@@ -19,7 +19,7 @@ import Layout from '../../components/Layout';
 import classes from '../../utils/classes';
 import client from '../../utils/client';
 import { urlFor, urlForThumbnail } from '../../utils/image';
-import { Store } from '../../utils/store';
+import { Store } from '../../utils/Store';
 import axios from 'axios';
 
 export default function ProductScreen(props) {
@@ -75,19 +75,18 @@ export default function ProductScreen(props) {
       variant: 'success',
     });
   };
-
   return (
     <Layout title={product?.title}>
       {loading ? (
         <CircularProgress />
       ) : error ? (
-        <Alert variant="error">(error)</Alert>
+        <Alert variant="error">{error}</Alert>
       ) : (
         <Box>
           <Box sx={classes.section}>
             <NextLink href="/" passHref>
               <Link>
-                <Typography>Back to results</Typography>
+                <Typography>back to result</Typography>
               </Link>
             </NextLink>
           </Box>
@@ -97,11 +96,11 @@ export default function ProductScreen(props) {
                 src={urlFor(product.image)}
                 alt={product.name}
                 layout="responsive"
-                width={648}
+                width={640}
                 height={640}
               />
             </Grid>
-            <Grid md={3} xs={12}>
+            <Grid item md={3} xs={12}>
               <List>
                 <ListItem>
                   <Typography component="h1" variant="h1">
