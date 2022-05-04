@@ -27,7 +27,7 @@
    1. define Context, Store and reducer
    2. set darkMode flag
    3. use it on layout
-11. Implement Add to Cart
+10. Implement Add to Cart
    1. define cart in context
    2. dispatch add to cart action
    3. set click event handler for button
