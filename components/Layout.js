@@ -78,7 +78,7 @@ export default function Layout({ title, description, children }) {
                 checked={darkMode}
                 onChange={darkModeChangeHandler}
               ></Switch>
-              <NextLink href="cart" passHref>
+              <NextLink href="/cart" passHref>
                 <Link>
                   <Typography component="span">
                     {cart.cartItems.length > 0 ? (
