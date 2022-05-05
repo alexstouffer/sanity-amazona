@@ -28,17 +28,23 @@
    2. set darkMode flag
    3. use it on layout
 10. Implement Add to Cart
-   1. define cart in context
-   2. dispatch add to cart action
-   3. set click event handler for button
-   4. show cart items in the header menu
+
+- define cart in context
+- dispatch add to cart action
+- set click event handler for button
+- show cart items in the header menu
+
 11. Create Cart Screen
     1. get cart items from context
     2. render in the screen
     3. show cart items in the header menu
     4. implement add to cart in home page
+12. Display Cart Badge In Header Menu
+    1. add cart link to header
+    2. show cart items badge in header
+    3. implement add to cart in home page
 
-Current Lesson: 11
+Current Lesson: 12
 
 ## NPM Error
 
